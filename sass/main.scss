@@ -13,36 +13,6 @@ body {
     @include flex(column, center, center);
 }
 
-.background {
-    position: absolute;
-    z-index: -10;
-    height: min-content;
-    width: 100%;
-    overflow: hidden;
-
-    .top {
-        position: fixed;
-        top: -5%;
-        left: -40%;
-
-        width: min(90%, 100%);
-    }
-
-    .bottom {
-        position: fixed;
-        bottom: -5%;
-        right: -40%;
-
-        width: min(90%, 100%);
-    }
-
-    @include flex(column, center, center);
-    gap: 25rem;
-
-    // transform: rotate(-60deg);
-}
-
-
 .card-container {
     @include flex(column, center, center);
 
@@ -122,25 +92,6 @@ body {
                 color: $Dark-grayish-blue;
             }
 
-        }
-    }
-}
-
-@media (min-width: 768px) {
-    .background {
-    
-        .top {
-            top: -60%;
-            left: -20%;
-    
-            width: min(70%, 80%);
-        }
-    
-        .bottom {
-            bottom: -60%;
-            right: -20%;
-    
-            width: min(70%, 80%);
         }
     }
 }

@@ -1,0 +1,29 @@
+// google font link 
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+// scss link
+@import './variable';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: $Dark-cyan;
+    // background-size: clamp(60rem, 80%, 120rem), clamp(60rem, 80%, 120rem);
+    // background-repeat: no-repeat;
+    // background-position-x: -45rem, 22rem;
+    // background-position-y: -20rem, 20rem;
+    // overflow: hidden;
+
+    font-family: $primary-font;
+}

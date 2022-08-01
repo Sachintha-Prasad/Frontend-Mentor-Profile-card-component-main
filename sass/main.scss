@@ -1,0 +1,145 @@
+// scss fli links 
+@import './reset';
+@import './mixin';
+@import './variable';
+
+// content 
+body {
+    max-width: 100%;
+    min-height: 100vh;
+
+    position: relative;
+    
+    @include flex(column, center, center);
+}
+
+.background {
+    position: absolute;
+    z-index: -10;
+    height: min-content;
+    width: 100%;
+    overflow: hidden;
+
+    .top {
+        position: fixed;
+        top: -5%;
+        left: -40%;
+
+        width: min(90%, 100%);
+    }
+
+    .bottom {
+        position: fixed;
+        bottom: -5%;
+        right: -40%;
+
+        width: min(90%, 100%);
+    }
+
+    @include flex(column, center, center);
+    gap: 25rem;
+
+    // transform: rotate(-60deg);
+}
+
+
+.card-container {
+    @include flex(column, center, center);
+
+    width: clamp(10rem, 96%, 30rem);
+    
+    background: hsl(0, 0%, 100%);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    
+    position: relative;
+
+    .avatar-img {
+        position: absolute;
+        top: 25%;
+
+        width: min(30%, 9rem);
+
+        border-radius: 50%;
+        outline: .5rem solid white;
+
+        
+    }
+    
+    .first-row {
+        @include flex(row, center, center);
+        gap: 1rem;
+        margin-top: 20%;
+
+        margin-bottom: 1rem;
+
+        .name {
+            font-size: 1.6rem;
+            color: $Very-dark-desaturated-blue;
+        }
+        
+        .age {
+            font-size: 1.6rem;
+            color: $Dark-grayish-blue;
+        }
+    }
+    
+    .second-row {
+        margin-bottom: 10%;
+        
+        .city {
+            font-size: 1.4rem;
+            color: $Dark-grayish-blue;
+        }
+    }
+
+    & hr {
+        width: 100%;
+        height: .1rem;
+        opacity: .2;
+        background-color: $Dark-gray;
+        margin-bottom: 2rem;
+    }
+    
+    .third-row {
+        width: 80%;
+
+        @include flex(row, center, space-between);
+        // gap: 5rem;
+        margin-bottom: 2rem;
+        
+        .column {
+            @include flex(column, center, center);
+            gap: .5rem;
+
+            .stats {
+                font-size: 1.6rem;
+            }
+
+            .stat-name {
+                letter-spacing: .2rem;
+                color: $Dark-grayish-blue;
+            }
+
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .background {
+    
+        .top {
+            top: -40%;
+            left: -20%;
+    
+            width: min(70%, 80%);
+        }
+    
+        .bottom {
+            bottom: -40%;
+            right: -20%;
+    
+            width: min(70%, 80%);
+        }
+    }
+}
